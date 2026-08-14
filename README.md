@@ -1,111 +1,110 @@
-# PhoneRepair CRM App
+# PhoneRepair CRM
 
-Aplikasi CRM (Customer Relationship Management) modern untuk bisnis perbaikan ponsel dan perangkat elektronik dengan integrasi AI dan WhatsApp.
+A modern CRM (Customer Relationship Management) app for phone and electronics repair businesses, with AI and WhatsApp integration.
 
-## Deskripsi
+PhoneRepair CRM gives a repair shop one place to manage customers, service tickets, inventory, technicians, and customer communication — through WhatsApp and an AI assistant that can answer questions using the shop's own CRM data.
 
-PhoneRepair CRM adalah aplikasi manajemen hubungan pelanggan yang dirancang khusus untuk bisnis perbaikan elektronik. Aplikasi ini menyediakan solusi komprehensif untuk mengelola pelanggan, tiket servis, inventaris, teknisi, dan komunikasi dengan pelanggan melalui WhatsApp dan ChatAI.
+## ✨ Features
 
-## Teknologi dan Framework
+- **Customer management** — store and manage customer records
+- **Service tickets** — create and track repair tickets end to end
+- **Technician management** — manage technicians and workload distribution
+- **Inventory** — track spare parts and stock levels, with restock reminders
+- **WhatsApp integration** — talk to customers directly via the WhatsApp API
+- **AI assistant** — a contextual chat assistant that can read CRM data (customers, tickets, inventory, stats)
+- **Dashboard** — business performance visualized with charts
+- **Monthly reports** — periodic performance analysis
+- **Invoicing** — generate invoices for customers
 
-### Frontend
-- **React 18** - Library JavaScript untuk membangun antarmuka pengguna
-- **TypeScript** - Superset JavaScript yang menambahkan tipe statis
-- **Vite** - Build tool yang cepat untuk aplikasi web modern
-- **TailwindCSS** - Framework CSS utility-first untuk styling
-- **React Router v7** - Routing untuk aplikasi React
-- **Recharts** - Library untuk membuat grafik dan visualisasi data
-- **Lucide React** - Set ikon modern untuk UI
+## 🔧 Tech Stack
 
-### Backend
-- **Node.js** - Runtime JavaScript untuk server
-- **Express** - Framework web untuk Node.js
-- **Socket.IO** - Library untuk komunikasi real-time
+**Frontend**
 
-### AI Integration
-- **OpenAI (ChatGPT-4o)** - AI untuk chat assistant
-- **Qwen AI** - Model AI alternatif untuk chat assistant
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS
+- React Router v7
+- Recharts (data visualization)
+- Lucide React (icons)
 
-### Komunikasi
-- **WhatsApp API** - Integrasi untuk komunikasi dengan pelanggan
-- **SMS Service** - Layanan notifikasi untuk update status servis
+**Backend**
 
-### Penyimpanan Data
-- **localStorage** - Penyimpanan data di sisi klien
-- **JSON** - Format data untuk pertukaran informasi
+- Node.js + Express
+- Socket.IO (real-time updates)
 
-## Fitur Utama
+**Integrations**
 
-- **Manajemen Pelanggan** - Simpan dan kelola data pelanggan
-- **Tiket Servis** - Buat dan lacak tiket servis untuk perbaikan perangkat
-- **Manajemen Teknisi** - Kelola teknisi dan distribusi beban kerja
-- **Manajemen Inventaris** - Lacak stok spare part dan barang
-- **Integrasi WhatsApp** - Komunikasi langsung dengan pelanggan melalui WhatsApp
-- **ChatAI** - Asisten AI yang dapat memberikan informasi dari data CRM
-- **Dashboard** - Visualisasi data kinerja bisnis
-- **Laporan Bulanan** - Analisis kinerja bisnis secara berkala
-- **Faktur** - Pembuatan faktur untuk pelanggan
+- OpenAI (GPT-4o) / Qwen — AI chat assistant
+- WhatsApp Business API — customer communication
+- SMS service — service status notifications
 
-## Prasyarat
+## 🚀 Getting Started
 
-- Node.js (versi 14 atau lebih tinggi)
-- Akun WhatsApp Business API
-- API Key untuk OpenAI/ChatGPT atau Qwen AI
-- Koneksi internet
+### Prerequisites
 
-## Instalasi
+- Node.js 14+
+- A WhatsApp Business API account
+- An OpenAI or Qwen API key
+- Internet connection
 
-1. Clone repositori ini
-2. Install dependensi dengan perintah:
-   ```
-   npm install
-   ```
-3. Salin file `.env.example` ke `.env` dan isi dengan kredensial yang diperlukan:
-   ```
-   VITE_CHATGPT_API_KEY=your_chatgpt_api_key
-   VITE_CHATGPT_API_ENDPOINT=your_chatgpt_api_endpoint
-   VITE_QWEN_API_KEY=your_qwen_api_key
-   VITE_QWEN_API_ENDPOINT=your_qwen_api_endpoint
-   WHATSAPP_PHONE_NUMBER_ID=your_phone_number_id
-   WHATSAPP_ACCESS_TOKEN=your_access_token
-   WHATSAPP_WEBHOOK_VERIFY_TOKEN=your_custom_verify_token
-   ```
+### Installation
 
-## Menjalankan Aplikasi
+1. Clone this repository
+2. Install dependencies:
 
-1. Jalankan server Socket.IO:
-   ```
-   npm run server
-   ```
-2. Jalankan aplikasi web dalam mode development:
-   ```
-   npm run dev
-   ```
-3. Atau jalankan keduanya sekaligus:
-   ```
-   npm run dev:all
-   ```
+```bash
+npm install
+```
 
-## Struktur Aplikasi
+3. Copy `.env.example` to `.env` and fill in your credentials:
 
-- `src/components/` - Komponen React untuk UI aplikasi
-- `src/services/` - Layanan untuk komunikasi dengan API eksternal
-- `src/types/` - Definisi tipe TypeScript
-- `src/lib/` - Utilitas dan fungsi helper
-- `server.ts` - Server backend untuk Socket.IO dan API
+```bash
+VITE_CHATGPT_API_KEY=your_chatgpt_api_key
+VITE_CHATGPT_API_ENDPOINT=your_chatgpt_api_endpoint
+VITE_QWEN_API_KEY=your_qwen_api_key
+VITE_QWEN_API_ENDPOINT=your_qwen_api_endpoint
+WHATSAPP_PHONE_NUMBER_ID=your_phone_number_id
+WHATSAPP_ACCESS_TOKEN=your_access_token
+WHATSAPP_WEBHOOK_VERIFY_TOKEN=your_custom_verify_token
+```
 
-## AI Contextual Chat
+### Running the app
 
-CRM App dilengkapi dengan fitur ChatAI yang dapat mengakses dan menganalisis data dari:
-- Data pelanggan (nama, kontak, alamat)
-- Tiket servis (dengan informasi lengkap pelanggan dan teknisi)
-- Inventaris
-- Data dashboard dan statistik
+Run the Socket.IO server:
 
-## Kontribusi
+```bash
+npm run server
+```
 
-Kontribusi selalu diterima! Silakan buat pull request atau buka issue untuk perbaikan atau fitur baru.
+Run the web app in development mode:
 
-## Lisensi
+```bash
+npm run dev
+```
+
+Or run both at once:
+
+```bash
+npm run dev:all
+```
+
+## 📂 Project Structure
+
+- `src/components/` — React UI components
+- `src/services/` — external API communication
+- `src/types/` — TypeScript type definitions
+- `src/lib/` — utilities and helpers
+- `server.ts` — backend server (Socket.IO + API)
+
+## 🤖 AI Contextual Chat
+
+The built-in AI assistant can access and analyze:
+
+- Customer data (name, contact, address)
+- Service tickets (with full customer and technician info)
+- Inventory
+- Dashboard data and statistics
+
+## 📄 License
 
 MIT
